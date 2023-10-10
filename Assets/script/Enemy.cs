@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
             {
                 moveCounter -= Time.deltaTime;
                 rb.velocity = moveDirection;
-
+transform.rotation = Quaternion.Euler(0, 0, 0);
                 if (moveCounter < 0.0f)
                 {
                     isMoving = false;
@@ -70,7 +70,7 @@ public class Enemy : MonoBehaviour
                     isMoving = true;
                     RandomMoveCounter();
                     moveDirection = new Vector3(Random.Range(-0.5f, 0.5f) * moveSpeed, 0.0f, Random.Range(-0.5f, 0.5f));
-
+                    
                     anim.SetBool("walk", true);
 
 
@@ -127,7 +127,7 @@ public class Enemy : MonoBehaviour
     public void AtackEnemy()
     {
         Vector3 targetDirection = (target.transform.position - transform.position).normalized;
-        Vector3 AlturaAttack = new Vector3 (transform.position.x, (transform.position.y + 3), transform.position.z);
+        Vector3 AlturaAttack = new Vector3 (transform.position.x, (transform.position.y + 10), transform.position.z);
         //Instancia o tiro na posição e rotaçao do inimigo
         GameObject tiro = Instantiate(objTiro, AlturaAttack, Quaternion.Euler(0f, 0f, 0f));
         

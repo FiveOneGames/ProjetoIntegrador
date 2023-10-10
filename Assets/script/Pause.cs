@@ -23,7 +23,7 @@ public class Pause : MonoBehaviour
     void Update()
     {
         btn_Menu.image.sprite = imagebtnmenu;
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.P))
         {
             BtnPausar();
         }

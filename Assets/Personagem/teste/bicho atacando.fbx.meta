@@ -3,7 +3,22 @@ guid: ef5d49c21c853440cb06d59a9fd5352e
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bear_diffuse
+    second: {fileID: 2800000, guid: a81263239dd454a089a9f02b099d84a7, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bear_normal
+    second: {fileID: 2800000, guid: d2e4518c925954b0f91b15ce9deba5e3, type: 3}
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: bear_specular
+    second: {fileID: 2800000, guid: 940592743590047868f6707aaa0d4f35, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0

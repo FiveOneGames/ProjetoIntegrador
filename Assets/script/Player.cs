@@ -41,7 +41,7 @@ public class Player : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) & ischao)
         {
             m_Animator.SetBool("jump", true);
-            transform.Translate(0, 15 * Time.deltaTime * 40, 0);
+            transform.Translate(0, 20 * Time.deltaTime * 40, 0);
             ischao = false;
         }
         else

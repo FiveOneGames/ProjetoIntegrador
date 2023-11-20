@@ -51,7 +51,7 @@ public class Enemy : MonoBehaviour
             {
                 moveCounter -= Time.deltaTime;
                 rb.velocity = moveDirection;
-transform.rotation = Quaternion.Euler(0, 0, 0);
+                transform.rotation = Quaternion.Euler(0, 0, 0);
                 if (moveCounter < 0.0f)
                 {
                     isMoving = false;

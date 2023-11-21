@@ -18,7 +18,7 @@ public class Chefe : MonoBehaviour
     public int speed = 3;
     private float nextFireTime = 0f;
     public float fireRate = 1f;
-    private int lifechefe = 9;
+    private int lifechefe = 2;
 
     public AudioClip[] attackSounds; // Array de sons de ataque do boss
     private AudioSource audioSource; // Componente de áudio para reproduzir os sons
@@ -158,7 +158,7 @@ public class Chefe : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player" && target.GetComponent<Animator>().GetBool("Attack") == true)
         {
             lifechefe++;
 
@@ -168,5 +168,6 @@ public class Chefe : MonoBehaviour
             Destroy(this, 1f);
 
         }
+    
     }
 }

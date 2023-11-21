@@ -55,9 +55,11 @@ public class Player : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        if (Input.GetKey(KeyCode.X))
         {
             m_Animator.SetBool("attack", true);
+
+            
 
         }
         else

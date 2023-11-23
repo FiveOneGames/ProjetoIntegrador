@@ -13,9 +13,11 @@ public class mudar_cena : MonoBehaviour
         {
             SceneManager.LoadScene("cutsceF2");
 
-        }
+        }    
+    }
 
-
-       
+    public void MudarCenaMenu()
+    {
+        SceneManager.LoadScene("menu");
     }
 }

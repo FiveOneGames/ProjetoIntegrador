@@ -158,7 +158,7 @@ public class Chefe : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && target.GetComponent<Animator>().GetBool("Attack") == true)
+        if (collision.gameObject.tag == "Player" && target.GetComponent<Animator>().GetBool("attack") == true)
         {
             lifechefe++;
 

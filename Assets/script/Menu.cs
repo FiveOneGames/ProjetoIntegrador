@@ -15,6 +15,7 @@ public class Menu : MonoBehaviour
 
     public void Sair()
     {
+        Debug.Log("Sair do jogo");
         Application.Quit();
     }
 

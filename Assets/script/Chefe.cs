@@ -14,8 +14,8 @@ public class Chefe : MonoBehaviour
     public float moveTime = 5;
     private float moveCounter;
     private Animator anim;
-    private float moveSpeed;
-    public int speed = 3;
+    private float moveSpeed = 50;
+    public int speed;
     private float nextFireTime = 0f;
     public float fireRate = 1f;
     private int lifechefe = 2;
@@ -33,19 +33,21 @@ public class Chefe : MonoBehaviour
     {
         //target = GameObject.FindWithTag("Player");
         anim = GetComponent<Animator>();
-        anim.SetBool("walk", false);
+        moveDirection = new Vector3(Random.Range(-0.5f, 0.5f) * moveSpeed, 0.0f, Random.Range(-0.5f, 0.5f));
+        anim.SetBool("walk", true);
         RandomWaitCounter();
         RandomMoveCounter();
         moveSpeed = 50;
 
         audioSource = GetComponent<AudioSource>(); // Obtém o componente de áudio do objeto
-
+        
     }
 
     private void Update()
     {
 
-        if (Vector3.Distance(target.transform.position, transform.position) <= agroRange)
+        
+        if (Vector3.Distance(target.transform.position, transform.position) >= agroRange)
         {
             anim.SetBool("attack", false);
             if (isMoving)
@@ -93,11 +95,14 @@ public class Chefe : MonoBehaviour
             Vector3 dirToPlayer = (target.transform.position - transform.position).normalized;
             rb.velocity = dirToPlayer * moveSpeed;
 
-            anim.SetBool("walk", true);
+            anim.SetBool("walk", false);
             anim.SetBool("attack", true);
-            moveSpeed = 10;
-            if (Time.time >= nextFireTime)
+            moveSpeed = 50;
+
+            if (Time.time <= nextFireTime)
             {
+           
+               
                 AtackEnemy();
                 nextFireTime = Time.time + 1f / fireRate; //Atualiza o proximo tempo de tiro
 
@@ -105,10 +110,6 @@ public class Chefe : MonoBehaviour
 
         }
     }
-
-
-
-
 
 
 

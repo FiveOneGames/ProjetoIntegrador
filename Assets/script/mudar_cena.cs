@@ -29,13 +29,6 @@ public class mudar_cena : MonoBehaviour
 
         }
 
-
-       
-
-
-
-
-
     }
 
 
@@ -43,6 +36,12 @@ public class mudar_cena : MonoBehaviour
     public void MudarCenaMenu()
     {
         SceneManager.LoadScene("menu");
+    }
+
+    public void MudarCenaCutSceneChefe()
+    {
+        SceneManager.LoadScene("Fase final 2");
+
     }
 
 }

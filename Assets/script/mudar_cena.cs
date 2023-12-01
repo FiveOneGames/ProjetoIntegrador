@@ -28,6 +28,11 @@ public class mudar_cena : MonoBehaviour
             SceneManager.LoadScene("Reflorestamento");
 
         }
+        if (collision.gameObject.tag == "Player" && cena == "Reflorestamento")
+        {
+            SceneManager.LoadScene("CutsceFinal");
+
+        }
 
     }
 
@@ -36,6 +41,12 @@ public class mudar_cena : MonoBehaviour
     public void MudarCenaMenu()
     {
         SceneManager.LoadScene("menu");
+    }
+
+    public void MudarCenaParaFinal()
+    {
+        SceneManager.LoadScene("Fase final");
+
     }
 
     public void MudarCenaCutSceneChefe()

@@ -67,6 +67,27 @@ public class Player : MonoBehaviour
             m_Animator.SetBool("attack", false);
 
         }
+
+        if (Input.GetKeyDown(KeyCode.X))
+        {
+            attack();
+        }
+
+    }
+    void attack()
+    {
+        if (Input.GetKey(KeyCode.X))
+        {
+            m_Animator.SetBool("attack", true);
+
+
+
+        }
+        else
+        {
+            m_Animator.SetBool("attack", false);
+
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -81,6 +102,9 @@ public class Player : MonoBehaviour
                 this.transform.position = GameObject.Find("inicio").transform.position;
                 this.transform.eulerAngles = new Vector3(0, 0, 0);
             }
+
+
+
         }
 
 
@@ -100,5 +124,11 @@ public class Player : MonoBehaviour
         
 
     }
+
+
+
+
+
+
 
 }

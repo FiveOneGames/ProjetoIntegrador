@@ -20,6 +20,9 @@ public class Chefe : MonoBehaviour
     public float fireRate = 1f;
     private int lifechefe = 2;
 
+
+
+
     public AudioClip[] attackSounds; // Array de sons de ataque do boss
     private AudioSource audioSource; // Componente de áudio para reproduzir os sons
 
@@ -40,13 +43,16 @@ public class Chefe : MonoBehaviour
         moveSpeed = 50;
 
         audioSource = GetComponent<AudioSource>(); // Obtém o componente de áudio do objeto
-        
+
+
+
+
     }
 
     private void Update()
     {
 
-        
+
         if (Vector3.Distance(target.transform.position, transform.position) >= agroRange)
         {
             anim.SetBool("attack", false);
@@ -101,8 +107,8 @@ public class Chefe : MonoBehaviour
 
             if (Time.time <= nextFireTime)
             {
-           
-               
+
+
                 AtackEnemy();
                 nextFireTime = Time.time + 1f / fireRate; //Atualiza o proximo tempo de tiro
 
@@ -159,16 +165,35 @@ public class Chefe : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == "Player" && target.GetComponent<Animator>().GetBool("attack") == true)
+        /* if (collision.gameObject.tag == "Player" && target.GetComponent<Animator>().GetBool("attack") == true)
+         {
+             lifechefe--;
+             Debug.Log("tirou vida");
+
+         }
+         if (lifechefe == 1)
+         {
+             Destroy(this, 1f);
+
+         }/*/
+
+        if (collision.gameObject.tag == "Player")
         {
-            lifechefe++;
+            lifechefe -= 1;
+            if (lifechefe <= 0)
+            {
+
+                Destroy(this.gameObject);
+
+            }
+
 
         }
-        if (lifechefe == 1)
-        {
-            Destroy(this, 1f);
 
-        }
-    
+
+
+
+
+
     }
 }

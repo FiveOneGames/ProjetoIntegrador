@@ -1,0 +1,30 @@
+﻿<Properties StartupConfiguration="{E3B9AC9D-DAE3-E77E-B098-0A2EA552B741}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/script/Player.cs">
+    <Files>
+      <File FileName="Assets/script/Radio.cs" />
+      <File FileName="Assets/script/Player.cs" Line="101" Column="28" />
+      <File FileName="Assets/script/Enemy.cs" Line="1" Column="1" />
+      <File FileName="Assets/script/Chefe.cs" Line="199" Column="2" />
+      <File FileName="Assets/script/mudar_cena.cs" Line="33" Column="48" />
+      <File FileName="Assets/script/Menu.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProjetoIntegrador" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="script" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="24b92375-250e-49b7-9bbe-18de57f5ce99" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+</Properties>
